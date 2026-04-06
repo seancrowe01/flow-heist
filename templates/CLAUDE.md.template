@@ -1,0 +1,60 @@
+# {{BUSINESS_NAME}} -- Flow Machine
+
+## Business
+
+| Field | Value |
+|-------|-------|
+| Business | {{BUSINESS_NAME}} |
+| Offer | {{OFFER}} |
+| Target Customer | {{TARGET_CUSTOMER}} |
+
+## Automation Config
+
+| Field | Value |
+|-------|-------|
+| Primary Platform | {{PRIMARY_PLATFORM}} |
+| Flows Running | {{FLOW_COUNT}} |
+| Primary Goal | {{PRIMARY_GOAL}} |
+
+## Airtable
+
+| Field | Value |
+|-------|-------|
+| Base ID | {{AIRTABLE_BASE_ID}} |
+| Flow Library Table | {{FLOW_LIBRARY_TABLE_ID}} |
+| Flow Audits Table | {{FLOW_AUDITS_TABLE_ID}} |
+| Capture Log Table | {{CAPTURE_LOG_TABLE_ID}} |
+
+## Connected Tools
+
+| Tool | Status |
+|------|--------|
+| Airtable MCP | {{AIRTABLE_STATUS}} |
+| ManyChat MCP | {{MANYCHAT_STATUS}} |
+| Slack MCP | {{SLACK_STATUS}} |
+
+## Skills
+
+| Command | What It Does |
+|---------|-------------|
+| `/flow-setup` | One-time installation wizard |
+| `/flow-capture` | Analyze any automation screenshot into a rebuild guide |
+| `/flow-library` | Browse and search saved flows |
+| `/flow-adapt` | Customize a saved flow for your business |
+| `/flow-audit` | Analyze flows for leaks and improvements |
+| `/flow-templates` | Pre-built flows for common use cases |
+| `/flow-batch` | Batch analyze multiple screenshots |
+| `/flow-export` | Export flows as shareable documents |
+
+## Reference Files
+
+| File | What It Contains |
+|------|-----------------|
+| `reference/manychat-anatomy.md` | Every ManyChat UI element mapped |
+| `reference/flow-patterns.md` | 8 proven DM flow architectures |
+| `reference/trigger-types.md` | All trigger types across platforms |
+| `reference/conversion-benchmarks.md` | Expected performance metrics by flow type |
+| `reference/flow-diagnostics.md` | 10-point flow audit checklist |
+| `reference/platform-elements.md` | Visual element identification across platforms |
+| `reference/compliance.md` | Instagram/Meta DM automation rules |
+| `reference/copywriting-for-flows.md` | Button text, message copy, CTA patterns |

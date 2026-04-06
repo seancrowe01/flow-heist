@@ -1,0 +1,20 @@
+# Environment
+.env
+
+# Screenshots (user-specific, often large)
+screenshots/*
+!screenshots/.gitkeep
+
+# Exports
+exports/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

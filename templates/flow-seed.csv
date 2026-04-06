@@ -1,0 +1,4 @@
+Flow Name,Platform,Flow Type,Source,Trigger Type,Message Count,Strategy Notes
+Example Lead Magnet,ManyChat,Lead Magnet,Template,comment_keyword,4,Comment trigger delivers PDF via DM. Collects email before delivery.
+Example Quiz Funnel,ManyChat,Quiz,Template,comment_keyword,8,Interactive quiz segments audience then delivers personalized CTA.
+Example Booking Flow,ManyChat,Sales,Template,dm_keyword,5,Qualifies lead with 3 questions then sends booking link.

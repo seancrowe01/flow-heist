@@ -1,0 +1,118 @@
+{
+  "name": "Flow Machine - Weekly Digest",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "trigger",
+      "name": "Monday 9am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "application": "YOUR_AIRTABLE_BASE_ID",
+        "table": "YOUR_FLOW_LIBRARY_TABLE_ID",
+        "returnAll": true
+      },
+      "id": "read-library",
+      "name": "Read Flow Library",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2,
+      "position": [440, 300],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Airtable PAT"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "application": "YOUR_AIRTABLE_BASE_ID",
+        "table": "YOUR_FLOW_AUDITS_TABLE_ID",
+        "returnAll": true
+      },
+      "id": "read-audits",
+      "name": "Read Flow Audits",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2,
+      "position": [440, 500],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Airtable PAT"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const library = $('Read Flow Library').all();\nconst audits = $('Read Flow Audits').all();\n\nconst now = new Date();\nconst weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);\n\n// Count flows added this week\nconst newFlows = library.filter(item => {\n  const added = new Date(item.json.fields['Date Added']);\n  return added >= weekAgo;\n});\n\nconst captured = newFlows.filter(i => i.json.fields.Source === 'Captured').length;\nconst adapted = newFlows.filter(i => i.json.fields.Source === 'Adapted').length;\nconst templated = newFlows.filter(i => i.json.fields.Source === 'Template').length;\n\n// Count audits this week\nconst newAudits = audits.filter(item => {\n  const date = new Date(item.json.fields['Audit Date']);\n  return date >= weekAgo;\n});\n\n// Platform breakdown\nconst platforms = {};\nlibrary.forEach(item => {\n  const p = item.json.fields.Platform || 'Unknown';\n  platforms[p] = (platforms[p] || 0) + 1;\n});\n\nconst platformStr = Object.entries(platforms)\n  .sort((a, b) => b[1] - a[1])\n  .map(([k, v]) => `${k}: ${v}`)\n  .join(', ');\n\nconst summary = `FLOW MACHINE - WEEKLY DIGEST\\n` +\n  `---\\n` +\n  `New this week: ${newFlows.length} flows\\n` +\n  `  Captured: ${captured}\\n` +\n  `  Adapted: ${adapted}\\n` +\n  `  Templates: ${templated}\\n` +\n  `Audits run: ${newAudits.length}\\n` +\n  `---\\n` +\n  `Library total: ${library.length} flows\\n` +\n  `Platforms: ${platformStr}\\n` +\n  `---`;\n\nreturn [{ json: { summary } }];"
+      },
+      "id": "calculate",
+      "name": "Calculate Digest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [660, 400]
+    },
+    {
+      "parameters": {
+        "url": "YOUR_SLACK_WEBHOOK_URL",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.summary }}"
+            }
+          ]
+        }
+      },
+      "id": "slack",
+      "name": "Post to Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [880, 400]
+    }
+  ],
+  "connections": {
+    "Monday 9am": {
+      "main": [
+        [
+          { "node": "Read Flow Library", "type": "main", "index": 0 },
+          { "node": "Read Flow Audits", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Read Flow Library": {
+      "main": [
+        [{ "node": "Calculate Digest", "type": "main", "index": 0 }]
+      ]
+    },
+    "Read Flow Audits": {
+      "main": [
+        [{ "node": "Calculate Digest", "type": "main", "index": 0 }]
+      ]
+    },
+    "Calculate Digest": {
+      "main": [
+        [{ "node": "Post to Slack", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
