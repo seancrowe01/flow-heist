@@ -30,7 +30,12 @@ The user will provide screenshots in one of these ways:
 1. **File path:** `/flow-capture path/to/screenshot.png`
 2. **Multiple files:** `/flow-capture path/to/screenshot1.png path/to/screenshot2.png`
 3. **Folder:** `/flow-capture screenshots/` (process all images in folder)
-4. **No path:** Ask the user to provide a screenshot path or drop images in the `screenshots/` folder
+4. **Clipboard:** If no path given, try grabbing from clipboard first:
+   ```bash
+   powershell -command "Get-Clipboard -Format Image | ForEach-Object { $_.Save('screenshots/clipboard-capture.png') }"
+   ```
+   If that produces a file (size > 0), use it. Tell the user: "Grabbed screenshot from your clipboard."
+5. **No path and no clipboard:** Ask the user to provide a screenshot path, copy one to clipboard, or drop images in the `screenshots/` folder
 
 Accept these image formats: PNG, JPG, JPEG, WEBP, GIF.
 
