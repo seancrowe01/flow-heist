@@ -33,16 +33,28 @@ Until now.
 
 ## 5 Seconds. That's It.
 
+Three ways to get a screenshot into the Flow Machine:
+
+### Option A: Clipboard (fastest)
 ```
 1. Screenshot the flow       (Win+Shift+S or Cmd+Shift+4)
-2. Open Claude Code          type: /flow-capture
-3. Paste                     Ctrl+V
-4. Hit enter
+2. Type: /flow-capture
+3. Hit enter
+```
+The skill auto-grabs whatever image is on your clipboard. No saving files. No uploading.
+
+### Option B: File path
+```
+/flow-capture path/to/screenshot.png
 ```
 
-Screenshot goes straight from your clipboard into Claude Code. No saving files. No uploading. No dragging to a folder.
+### Option C: Folder (batch)
+```
+/flow-batch screenshots/
+```
+Processes every screenshot in the folder at once.
 
-You can also drag and drop image files, or pass a file path. But clipboard paste is the fastest -- screenshot to rebuild guide in one move.
+That's it. Screenshot to rebuild guide in one command.
 
 ---
 
@@ -117,18 +129,62 @@ Add your Airtable API key to `.env`, open Claude Code, and run `/flow-setup`. Do
 
 ---
 
-## Skills
+## Skills -- How to Use Each One
 
-| Command | What It Does |
-|---------|-------------|
-| `/flow-setup` | One-time wizard -- creates your tables, wires your tools, generates your config |
-| `/flow-capture` | The core -- screenshot in, rebuild guide out |
-| `/flow-library` | Browse, search, and filter your saved flows |
-| `/flow-adapt` | Take any flow and rewrite it for your business |
-| `/flow-audit` | 10-point diagnostic -- find leaks and fix them |
-| `/flow-templates` | 8 pre-built flows, personalized before you see them |
-| `/flow-batch` | Drop a folder of screenshots, process them all at once |
-| `/flow-export` | Export any flow as a clean shareable document |
+All commands run inside Claude Code. Type the command and hit enter.
+
+### `/flow-setup` -- Run this first
+One-time wizard. Asks about your business, creates your Airtable tables, wires your MCP servers, generates your config. Takes 5 minutes.
+```
+/flow-setup
+```
+
+### `/flow-capture` -- The core skill
+Screenshot in, rebuild guide out. Give it a file path, or copy a screenshot and it grabs from your clipboard automatically.
+```
+/flow-capture                              (grabs clipboard)
+/flow-capture screenshots/my-flow.png      (specific file)
+```
+
+### `/flow-adapt` -- Make it yours
+Takes any flow from your library and rewrites every message for your business. Same structure, new copy.
+```
+/flow-adapt Lead Magnet - PDF Delivery
+/flow-adapt last                           (adapts the last captured flow)
+```
+
+### `/flow-audit` -- Find the leaks
+Runs a 10-point diagnostic on any flow. Works on screenshots or saved flows.
+```
+/flow-audit                                (paste a screenshot)
+/flow-audit Lead Magnet - PDF Delivery     (audit a saved flow)
+```
+
+### `/flow-templates` -- Start from proven patterns
+8 pre-built flow architectures. Pick one, answer 3 questions about your business, get a full rebuild guide with copy written for you.
+```
+/flow-templates
+```
+
+### `/flow-library` -- Browse your saved flows
+Search and filter everything you've captured, adapted, or built.
+```
+/flow-library                              (show all)
+/flow-library ManyChat lead magnets        (search)
+```
+
+### `/flow-batch` -- Process a folder of screenshots
+Drop 10 screenshots in a folder, process them all at once.
+```
+/flow-batch screenshots/
+```
+
+### `/flow-export` -- Share your flows
+Export any flow as a clean markdown document or CSV.
+```
+/flow-export Lead Magnet - PDF Delivery
+/flow-export all                           (CSV of entire library)
+```
 
 ---
 
@@ -140,7 +196,7 @@ This is the move that nobody else can do.
 2. Comment their keyword on a post
 3. Go through their entire DM sequence
 4. Screenshot every message, every button, every path
-5. Ctrl+V into Claude Code
+5. Run `/flow-capture` -- it grabs the screenshot and does the rest
 
 You get back:
 - **Why the flow works** -- the psychology behind the sequence
