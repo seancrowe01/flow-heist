@@ -25,7 +25,7 @@ You screenshot it.
 
 Then you stare at it for 20 minutes trying to figure out how to actually build it.
 
-**71,400 people starred screenshot-to-code** because they wanted to turn UI screenshots into working code. Nobody built the same thing for automations.
+**Screenshot-to-code became one of the most popular repos on GitHub** because people wanted to turn UI screenshots into working code. Nobody built the same thing for automations.
 
 Until now.
 
@@ -160,17 +160,17 @@ This is not copying. You're studying what works, understanding why, and building
 
 Not really.
 
-| Tool | What It Does | Limitation |
-|------|-------------|------------|
-| **ManyChat AI Flow Builder** | Generates flows from text descriptions | Text-to-flow only. Cannot read screenshots. |
-| **Rumjahn's n8n-from-screenshot** | Poe bot that turns n8n screenshots into JSON | n8n only. No rebuild guide, no library, no multi-platform. |
-| **Template marketplaces** (Etsy, Botmakers) | Pre-built ManyChat templates for $4-22 | Generic. No customization. No strategy explanation. |
-| **ManyChat's template sharing** | Export/import flows between accounts | Requires admin access to the source account. |
-| **Fiverr freelancers** | Build a ManyChat flow for $5-60 | One flow at a time. No learning, no library. |
+| What Exists Today | Limitation |
+|-------------------|------------|
+| **AI flow builders** (text-to-flow) | Generate flows from text descriptions. Cannot read screenshots. |
+| **Screenshot-to-JSON bots** | Single platform only. Raw output, no rebuild guide, no library. |
+| **Template marketplaces** | Generic templates. No customization. No strategy explanation. |
+| **Flow sharing/cloning** | Requires admin access to the source account. |
+| **Freelancers** | One flow at a time. No learning, no library, no compound value. |
 
 None of them do what this does: **screenshot in, personalized rebuild guide out, saved to a growing library.**
 
-The closest thing is screenshot-to-code for UI design (71K stars). Nobody has applied that concept to automations. The ManyChat developer ecosystem has 15 GitHub repos total. This space is empty.
+People built screenshot-to-code for UI design and it became one of the most popular repos on GitHub. Nobody has applied that concept to automations. This space is wide open.
 
 ---
 
