@@ -139,7 +139,7 @@ for _ in range(40):
 # TITLE
 # ═══════════════════════════════════════════════════════
 
-text_center(0, 28, W, "THE FLOW MACHINE", f_title, DARK)
+text_center(0, 28, W, "THE FLOW HEIST", f_title, DARK)
 for sx, sy in [(340, 30), (355, 55), (1620, 35), (1640, 58)]:
     draw.text((sx, sy), "*", font=font_bold(18), fill=TEAL)
 

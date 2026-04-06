@@ -24,4 +24,4 @@ Runs every Monday at 9am. Reads your Flow Library from Airtable, counts activity
 
 ### Without n8n
 
-You don't need n8n. The Flow Machine is user-driven -- you run `/flow-capture` when you have a screenshot. The n8n workflow is just a weekly accountability nudge.
+You don't need n8n. The Flow Heist is user-driven -- you run `/flow-capture` when you have a screenshot. The n8n workflow is just a weekly accountability nudge.

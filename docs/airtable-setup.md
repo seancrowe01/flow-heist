@@ -7,7 +7,7 @@ If the `/flow-setup` wizard fails to create tables automatically, follow these s
 ## Step 1: Create or open a base
 
 1. Go to [airtable.com](https://airtable.com)
-2. Create a new base called "Flow Machine" (or use an existing base)
+2. Create a new base called "Flow Heist" (or use an existing base)
 3. Copy the Base ID from the URL: `https://airtable.com/appXXXXXXXXXXXXXX/...`
 
 ---

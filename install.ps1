@@ -1,14 +1,14 @@
-# The Flow Machine �� One-line installer for Windows
-# irm https://raw.githubusercontent.com/seancrowe01/flow-machine/main/install.ps1 | iex
+# The Flow Heist �� One-line installer for Windows
+# irm https://raw.githubusercontent.com/seancrowe01/flow-heist/main/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
-$REPO = "https://github.com/seancrowe01/flow-machine.git"
-$DIR = "flow-machine"
+$REPO = "https://github.com/seancrowe01/flow-heist.git"
+$DIR = "flow-heist"
 
 Write-Host ""
 Write-Host "  ╔══════���═══════════════════════════╗"
-Write-Host "  ║       THE FLOW MACHINE           ║"
+Write-Host "  ║       THE FLOW HEIST           ║"
 Write-Host "  ║  Screenshots → Rebuild Guides    ║"
 Write-Host "  ╚══════════════════════════════════╝"
 Write-Host ""

@@ -1,4 +1,4 @@
-# Flow Machine -- 8 Proven DM Flow Architectures
+# Flow Heist -- 8 Proven DM Flow Architectures
 
 Reference document for building automated DM flows across ManyChat, GoHighLevel, and other automation platforms. Each pattern is battle-tested and includes enough detail to rebuild from scratch.
 

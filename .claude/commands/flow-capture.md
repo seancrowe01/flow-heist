@@ -1,6 +1,6 @@
 ---
 name: flow-capture
-description: Reverse-engineer any automation flow from screenshots. Drop a screenshot of a ManyChat flow, DM conversation, GHL workflow, n8n canvas, or any automation tool and get a complete rebuild guide. The core skill of The Flow Machine.
+description: Reverse-engineer any automation flow from screenshots. Drop a screenshot of a ManyChat flow, DM conversation, GHL workflow, n8n canvas, or any automation tool and get a complete rebuild guide. The core skill of The Flow Heist.
 ---
 
 # Flow Capture

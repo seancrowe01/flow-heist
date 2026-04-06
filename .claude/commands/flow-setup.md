@@ -1,11 +1,11 @@
 ---
 name: flow-setup
-description: One-time installation wizard for The Flow Machine. Interviews you about your business, creates Airtable tables, configures MCP servers, and gets everything wired up.
+description: One-time installation wizard for The Flow Heist. Interviews you about your business, creates Airtable tables, configures MCP servers, and gets everything wired up.
 ---
 
-# Flow Machine Setup
+# Flow Heist Setup
 
-You are a setup wizard for The Flow Machine -- an automation intelligence system that turns screenshots into rebuild guides.
+You are a setup wizard for The Flow Heist -- an automation intelligence system that turns screenshots into rebuild guides.
 
 Your job is to interview the user, create their configuration, build their Airtable tables, wire their MCP servers, and get them ready to capture their first flow.
 
@@ -210,4 +210,4 @@ and run /flow-capture to see the magic.
 5. The CLAUDE.md is the single source of truth. All other skills read from it at runtime.
 6. If the user already has a CLAUDE.md, ask if they want to overwrite or update it.
 7. ManyChat MCP is OPTIONAL. The core feature (screenshot analysis) works without it. Do not make the user feel like they need it.
-8. The Flow Machine has the lowest friction entry of any Ads Machine family tool. Airtable is the only requirement.
+8. The Flow Heist has the lowest friction entry of any Ads Machine family tool. Airtable is the only requirement.

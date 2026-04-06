@@ -1,15 +1,15 @@
 #!/bin/bash
-# The Flow Machine — One-line installer
-# curl -fsSL https://raw.githubusercontent.com/seancrowe01/flow-machine/main/install.sh | bash
+# The Flow Heist — One-line installer
+# curl -fsSL https://raw.githubusercontent.com/seancrowe01/flow-heist/main/install.sh | bash
 
 set -e
 
-REPO="https://github.com/seancrowe01/flow-machine.git"
-DIR="flow-machine"
+REPO="https://github.com/seancrowe01/flow-heist.git"
+DIR="flow-heist"
 
 echo ""
 echo "  ╔════════════════════════��═════════╗"
-echo "  ║       THE FLOW MACHINE           ║"
+echo "  ║       THE FLOW HEIST           ║"
 echo "  ║  Screenshots → Rebuild Guides    ║"
 echo "  ╚═════════════════════════════���════╝"
 echo ""

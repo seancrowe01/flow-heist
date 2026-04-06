@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="docs/blueprint.png" alt="The Flow Machine Blueprint" width="800" />
+<img src="docs/blueprint.png" alt="The Flow Heist Blueprint" width="800" />
 
-# The Flow Machine
+# The Flow Heist
 
 *Screenshot any automation. Get a step-by-step rebuild guide.*
 
@@ -33,7 +33,7 @@ Until now.
 
 ## 5 Seconds. That's It.
 
-Three ways to get a screenshot into the Flow Machine:
+Three ways to get a screenshot into the Flow Heist:
 
 ### Option A: Clipboard (fastest)
 ```
@@ -63,7 +63,7 @@ That's it. Screenshot to rebuild guide in one command.
 Drop a screenshot. Get everything you need to rebuild it.
 
 ```
-YOU                              THE FLOW MACHINE
+YOU                              THE FLOW HEIST
 ─────────────────────────────────────────────────
 
 Screenshot of a                  "This is a lead magnet flow.
@@ -108,20 +108,20 @@ LOOP       Your library grows. Your patterns compound.
 ### One-line install (Mac/Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/seancrowe01/flow-machine/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/seancrowe01/flow-heist/main/install.sh | bash
 ```
 
 ### One-line install (Windows PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/seancrowe01/flow-machine/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/seancrowe01/flow-heist/main/install.ps1 | iex
 ```
 
 ### Manual install
 
 ```bash
-git clone https://github.com/seancrowe01/flow-machine.git
-cd flow-machine
+git clone https://github.com/seancrowe01/flow-heist.git
+cd flow-heist
 cp .env.example .env
 ```
 
@@ -338,7 +338,7 @@ ManyChat is the primary platform. All others work for screenshot analysis today.
 
 DM automations play by different rules than email. If you don't know them, your flows get shut down.
 
-The Flow Machine knows them. Every rebuild guide and audit flags compliance issues automatically:
+The Flow Heist knows them. Every rebuild guide and audit flags compliance issues automatically:
 
 - **24-hour messaging window** -- automations must fire within 24 hours of the user's last action. After that, you need a One-Time Notification or manual message.
 - **Comment triggers** -- keywords must be specific. Generic words like "yes" or "love" will fire on normal comments and annoy people.
@@ -392,9 +392,9 @@ These ship with every install. No personal data. Claude reads them before analyz
 
 ## Pairs With
 
-The Flow Machine is the third tool in the system:
+The Flow Heist is the third tool in the system:
 
-| | Ads Machine | Command Centre | Flow Machine |
+| | Ads Machine | Command Centre | Flow Heist |
 |---|---|---|---|
 | **Does** | Research + create ads | Track + report clients | Build + optimize automations |
 | **Answers** | "What ads should we make?" | "How are clients doing?" | "How do I build this flow?" |
@@ -424,6 +424,6 @@ No npm packages. No Python. No Docker. Just Claude Code and a free Airtable acco
 
 Built by [Sean Crowe](https://github.com/seancrowe01) with Claude Code.
 
-**[The Ads Machine](https://github.com/seancrowe01/ads-machine)** | **[Agency Command Centre](https://github.com/seancrowe01/agency-command-centre)** | **The Flow Machine**
+**[The Ads Machine](https://github.com/seancrowe01/ads-machine)** | **[Agency Command Centre](https://github.com/seancrowe01/agency-command-centre)** | **The Flow Heist**
 
 </div>
